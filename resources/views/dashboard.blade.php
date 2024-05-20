@@ -232,11 +232,12 @@
             <h3 class="text-3xl font-semibold text-slate-800 dark:text-white mb-8">Tips & Trick</h3>
 
             {{-- Grid Kategori Loker --}}
-            <div class="grid grid-cols-3 gap-8">
+            {{-- <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"> --}}
+            <div class="flex flex-wrap justify-center gap-4">
                 {{-- Loop untuk tiap card yang ada di carousel --}}
                 @for ($i = 0; $i < 3; $i++)
                     <div
-                        class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                        class="max-w-sm flex-grow bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                         <a href="#">
                             <img class="rounded-t-lg" src="{{ asset('Image/hero-image.png') }}" alt="" />
                         </a>
