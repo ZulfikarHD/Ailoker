@@ -99,8 +99,7 @@
 
                                     <div class="flex flex-col justify-start items-start">
                                         {{-- Job Position --}}
-                                        <h5
-                                            class="text-2xl font-bold tracking-tight text-slate-900 dark:text-white">
+                                        <h5 class="text-2xl font-bold tracking-tight text-slate-900 dark:text-white">
                                             Designer
                                         </h5>
 
@@ -114,7 +113,8 @@
                                     </div>
                                 </div>
 
-                                <div class="flex gap-4 lg:gap-10 items-center flex-wrap justify-between lg:justify-end ml-auto mr-0 w-full lg:w-auto">
+                                <div
+                                    class="flex gap-4 lg:gap-10 items-center flex-wrap justify-between lg:justify-end ml-auto mr-0 w-full lg:w-auto">
                                     {{-- Pendidikan dan Status Kerja --}}
                                     <div class="flex gap-3 justify-center items-center">
                                         <label
@@ -232,42 +232,35 @@
             <h3 class="text-3xl font-semibold text-slate-800 dark:text-white mb-8">Tips & Trick</h3>
 
             {{-- Grid Kategori Loker --}}
-            <div class="grid grid-cols-4 gap-8">
+            <div class="grid grid-cols-3 gap-8">
                 {{-- Loop untuk tiap card yang ada di carousel --}}
-                @for ($i = 0; $i < 8; $i++)
-                    <div>
-                        <a href="#"
-                            class="block max-w-sm p-6 bg-white border border-gray-100 rounded-xl  hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-                            <div class="flex gap-4 items-center">
-
-                                {{-- Logo Kategory --}}
-                                <img src="{{ asset('Image/hero-image.png') }}" alt="category loker" class="max-h-8" />
-
-                                {{-- Nama Kategori --}}
-                                <div class="flex flex-col justify-start items-center">
-                                    {{-- Job Ti --}}
-                                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-slate-900 dark:text-white">
-                                        Designer
-                                    </h5>
-                                    <span
-                                        class="bg-gray-100 text-gray-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300 block -ml-2">
-                                        23 Loker
-                                    </span>
-                                </div>
-                            </div>
+                @for ($i = 0; $i < 3; $i++)
+                    <div
+                        class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                        <a href="#">
+                            <img class="rounded-t-lg" src="{{ asset('Image/hero-image.png') }}" alt="" />
                         </a>
+                        <div class="p-5">
+                            <a href="#">
+                                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                    Tips & Trik CV</h5>
+                            </a>
+                            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas beatae eaque magni ratione excepturi maiores.
+                            </p>
+                            <a href="#"
+                                class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                Baca Artikel
+                                <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
+                                </svg>
+                            </a>
+                        </div>
                     </div>
                 @endfor
             </div>
-
-            {{-- Button Lihat Semua --}}
-            <div class="text-center mt-8">
-                <button type="button"
-                    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-xl text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
-                    Lihat Semua
-                </button>
-            </div>
-        </div>
     </section>
 
     {{-- Company Profile Section --}}
