@@ -1,7 +1,6 @@
 <x-app-layout>
     {{-- Hero Section --}}
     <section class="bg-blue-200 w-full min-w-[100vh] px-10 mx-auto mb-16">
-        {{-- Hero Section --}}
         <div class="max-w-7xl mx-auto grid grid-cols-2 gap-4 items-center justify-between h-full py-24">
             {{-- Hero Text --}}
             <div class="w-full h-full flex flex-col justify-between">
