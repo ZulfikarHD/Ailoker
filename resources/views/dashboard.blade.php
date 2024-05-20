@@ -3,7 +3,7 @@
     <section class="bg-blue-200 w-full min-w-[100vh] px-10 mx-auto mb-16">
         <div class="max-w-7xl mx-auto grid grid-cols-2 gap-4 items-center justify-between h-full py-24">
             {{-- Hero Text --}}
-            <div class="w-full h-full flex flex-col justify-between">
+            <div class="w-full max-w-2xl mx-auto lg:max-w-full h-full flex flex-col justify-between col-span-2 lg:col-span-1">
                 <div>
                     <h1
                         class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-slate-950 md:text-5xl lg:text-6xl">
@@ -44,14 +44,41 @@
             </div>
 
             {{-- Image --}}
-            <div class="relative hidden md:block -ml-4">
+            <div class="relative hidden lg:block -ml-4 col-span-2 lg:col-span-1">
                 <img src="{{ asset('image/hero-image.png') }}" alt="hero image" class="w-full h-full">
             </div>
         </div>
     </section>
 
+    {{-- Loker Urgent --}}
+    <section class="mb-16 px-10">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-4 gap-8">
+                {{-- Loop untuk tiap card yang ada di carousel --}}
+                @for ($i = 0; $i < 4; $i++)
+                    <div>
+                        <a href="#"
+                            class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                            <div class="flex flex-col gap-2 justify-center items-center">
+                                <h5
+                                    class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white uppercase">
+                                    PT Blues
+                                </h5>
+
+                                <span
+                                    class="bg-blue-100 text-blue-800 text-sm font-bold px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">
+                                    18 Lowongan
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                @endfor
+            </div>
+        </div>
+    </section>
+
     {{-- Loker Terbaru --}}
-    <section>
+    <section class="px-10">
         <div class="max-w-7xl mx-auto">
             {{-- Header --}}
             <h3 class="text-3xl font-semibold text-slate-800 dark:text-white mb-8">Loker Terbaru</h3>
@@ -89,7 +116,7 @@
     </section>
 
     {{-- Category Loker --}}
-    <section>
+    <section class="px-10">
         <div class="max-w-7xl mx-auto mb-16">
             {{-- Header --}}
             <h3 class="text-3xl font-semibold text-slate-800 dark:text-white mb-8">Kategori Loker</h3>
@@ -133,7 +160,7 @@
     </section>
 
     {{-- Company Profile Section --}}
-    <section class="mb-16">
+    <section class="mb-16 px-10">
         <div class="max-w-7xl mx-auto">
             <div class="grid grid-cols-4 gap-8">
                 {{-- Loop untuk tiap card yang ada di carousel --}}
