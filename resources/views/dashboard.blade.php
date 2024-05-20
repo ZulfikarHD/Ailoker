@@ -2,19 +2,22 @@
     {{-- Hero Section --}}
     <section class="bg-blue-200 w-full min-w-[100vh] px-10 mx-auto mb-16">
         {{-- Hero Section --}}
-        <div class="max-w-7xl mx-auto flex items-center justify-between h-full py-24 lg:py-56">
-            <div class="max-w-[46%]">
-                {{-- Hero Text --}}
-                <h1
-                    class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-slate-950 md:text-5xl lg:text-6xl">
-                    Raih <span class="text-blue-700 ">Karir Impianmu</span> Dengan Sentuhan Jari
-                </h1>
-                <p class="mb-8 text-lg font-normal text-slate-950 lg:text-xl px-1 pt-1">
-                    Temukan pekerjaan impianmu dari berbagai lowongan yang tersedia oleh beberapa perusahaan ternama.
-                </p>
+        <div class="max-w-7xl mx-auto grid grid-cols-2 gap-4 items-center justify-between h-full py-24">
+            {{-- Hero Text --}}
+            <div class="w-full h-full flex flex-col justify-between">
+                <div>
+                    <h1
+                        class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-slate-950 md:text-5xl lg:text-6xl">
+                        Raih <span class="text-blue-700 ">Karir Impianmu</span> Dengan Sentuhan Jari
+                    </h1>
+                    <p class="mb-8 text-lg font-normal text-slate-950 lg:text-xl px-1 pt-1">
+                        Temukan pekerjaan impianmu dari berbagai lowongan yang tersedia oleh beberapa perusahaan
+                        ternama.
+                    </p>
+                </div>
 
                 {{-- Search --}}
-                <form class="w-full max-w-md">
+                <form class="w-full max-w-md mb-1">
                     {{-- Label Posisi --}}
                     <label for="posisi"
                         class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Posisi</label>
@@ -42,31 +45,42 @@
             </div>
 
             {{-- Image --}}
-            <div class="max-w-[46%] absolute right-28 -mt-10 hidden md:block">
+            <div class="relative hidden md:block -ml-4">
                 <img src="{{ asset('image/hero-image.png') }}" alt="hero image" class="w-full h-full">
             </div>
         </div>
     </section>
 
-    {{-- Company Profile Section --}}
-    <section class="mb-16">
+    {{-- Loker Terbaru --}}
+    <section>
         <div class="max-w-7xl mx-auto">
-            <div class="grid grid-cols-4 gap-8">
+            {{-- Header --}}
+            <h3 class="text-3xl font-semibold text-slate-800 dark:text-white mb-8">Loker Terbaru</h3>
+
+            {{-- Grid Loker Terbaru --}}
+            <div class="grid grid-rows-6 gap-6">
                 {{-- Loop untuk tiap card yang ada di carousel --}}
-                @for ($i = 0; $i < 4; $i++)
+                @for ($i = 0; $i < 5; $i++)
                     <div>
                         <a href="#"
-                            class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-                            <div class="flex flex-col gap-2 justify-center items-center">
-                                <h5
-                                    class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white uppercase">
-                                    PT Blues
-                                </h5>
+                            class="block w-full p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                            <div class="flex gap-4 items-center">
+                                {{-- Logo Kategory --}}
+                                <img src="{{ asset('Image/hero-image.png') }}" alt="category loker" class="max-h-8" />
 
-                                <span
-                                    class="bg-blue-100 text-blue-800 text-sm font-bold px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">
-                                    18 Lowongan
-                                </span>
+                                {{-- Nama Kategori --}}
+                                <div class="flex flex-col justify-start items-start">
+                                    <h5 class="text-2xl font-bold tracking-tight text-slate-900 dark:text-white text-s">
+                                        Designer
+                                    </h5>
+
+                                    <p class="font-normal text-gray-700 dark:text-gray-400"
+                                        style="max-width: 50ch; text-align: start; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
+                                        A designer's job involves creating visual concepts and designs for various
+                                        projects. It could include graphics, websites, products, or other creative
+                                        works. While design can be rewarding, it's not necessarily easy.
+                                    </p>
+                                </div>
                             </div>
                         </a>
                     </div>
@@ -119,36 +133,25 @@
         </div>
     </section>
 
-
-    {{-- Loker Terbaru --}}
-    <section>
+    {{-- Company Profile Section --}}
+    <section class="mb-16">
         <div class="max-w-7xl mx-auto">
-            {{-- Header --}}
-            <h3 class="text-3xl font-semibold text-slate-800 dark:text-white mb-8">Loker Terbaru</h3>
-
-            {{-- Grid Loker Terbaru --}}
-            <div class="grid grid-rows-6 gap-6">
+            <div class="grid grid-cols-4 gap-8">
                 {{-- Loop untuk tiap card yang ada di carousel --}}
-                @for ($i = 0; $i < 5; $i++)
+                @for ($i = 0; $i < 4; $i++)
                     <div>
                         <a href="#"
-                            class="block w-full p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-                            <div class="flex gap-4 items-center">
-                                {{-- Logo Kategory --}}
-                                <img src="{{ asset('Image/hero-image.png') }}" alt="category loker" class="max-h-8" />
+                            class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                            <div class="flex flex-col gap-2 justify-center items-center">
+                                <h5
+                                    class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white uppercase">
+                                    PT Blues
+                                </h5>
 
-                                {{-- Nama Kategori --}}
-                                <div class="flex flex-col justify-start items-start">
-                                    <h5 class="text-2xl font-bold tracking-tight text-slate-900 dark:text-white text-s">
-                                        Designer
-                                    </h5>
-
-                                    <p class="font-normal text-gray-700 dark:text-gray-400" style="max-width: 50ch; text-align: start; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
-                                        A designer's job involves creating visual concepts and designs for various
-                                        projects. It could include graphics, websites, products, or other creative
-                                        works. While design can be rewarding, it's not necessarily easy.
-                                    </p>
-                                </div>
+                                <span
+                                    class="bg-blue-100 text-blue-800 text-sm font-bold px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">
+                                    18 Lowongan
+                                </span>
                             </div>
                         </a>
                     </div>
@@ -156,5 +159,4 @@
             </div>
         </div>
     </section>
-
 </x-app-layout>
