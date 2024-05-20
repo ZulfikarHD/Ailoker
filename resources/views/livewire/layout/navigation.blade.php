@@ -1,5 +1,5 @@
 <header>
-    <nav class="bg-blue-200 border-gray-200 dark:bg-gray-900 dark:border-gray-700 z-50 sticky top-0 px-10">
+    <nav class="bg-blue-200 border-gray-200 dark:bg-gray-900 dark:border-gray-700 z-50 sticky top-0 px-4 md:px-10">
         <div class="max-w-7xl flex flex-wrap items-center justify-between mx-auto py-4">
             {{-- Logo --}}
             <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
