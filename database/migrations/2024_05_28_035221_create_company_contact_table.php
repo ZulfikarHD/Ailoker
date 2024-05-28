@@ -13,12 +13,16 @@ return new class extends Migration
     {
         Schema::create('company_contact', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('company_id')
-                ->constrained()
-                ->onDelete('cascade');
+            $table->unsignedBigInteger('company_id');
             $table->string('phone_number');
             $table->boolean('status')->default(TRUE);
             $table->timestamps();
+
+            // Foreign key constraint
+            $table->foreign('company_id')
+                  ->references('id')
+                  ->on('company')
+                  ->onDelete('cascade');
         });
     }
 

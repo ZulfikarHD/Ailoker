@@ -13,13 +13,17 @@ return new class extends Migration
     {
         Schema::create('company_email', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('company_id')
-                ->constrained()
-                ->onDelete('cascade');
             $table->string('email')->unique();
+            $table->unsignedBigInteger('company_id');
             $table->boolean('status')
                 ->default(true);
             $table->timestamps();
+
+            // Foreign key constraint
+            $table->foreign('company_id')
+                  ->references('id')
+                  ->on('company')
+                  ->onDelete('cascade');
         });
     }
 

@@ -13,7 +13,21 @@ return new class extends Migration
     {
         Schema::create('company_social_media', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('cmp_id');
+            $table->unsignedBigInteger('social_media_id');
             $table->timestamps();
+
+            // Foreign key constraints
+            $table->foreign('cmp_id')
+                  ->references('id')
+                  ->on('company')
+                  ->onUpdate('cascade')
+                  ->onDelete('cascade');
+
+            $table->foreign('social_media_id')
+                  ->references('id')->on('social_media')
+                  ->onUpdate('cascade')
+                  ->onDelete('cascade');
         });
     }
 

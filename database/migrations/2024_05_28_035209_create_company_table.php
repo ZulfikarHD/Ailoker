@@ -13,20 +13,21 @@ return new class extends Migration
     {
         Schema::create('company', function (Blueprint $table) {
             $table->id();
-            $table->string('cmp_name');
-            $table->string('cmp_address');
+            $table->string('name');
+            $table->string('address');
             $table->unsignedBigInteger('industry_id');
-            $table->text('cmp_size')->nullable();
+            $table->text('company_size')->nullable();
             $table->string('website')->nullable();
             $table->text('about_us')->nullable();
-            $table->string('cmp_logo')->nullable();
+            $table->string('logo')->nullable();
             $table->timestamps();
 
             // Foreign key constraint
             $table->foreign('industry_id')
                   ->references('id')
                   ->on('industry')
-                  ->onDelete('cascade');
+                  ->onUpdate('cascade')
+                  ->onDelete('no action');
         });
     }
 

@@ -13,7 +13,16 @@ return new class extends Migration
     {
         Schema::create('company_picture', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('company_id');
+            $table->integer('order');
+            $table->string('picture');
             $table->timestamps();
+
+            // Foreign key constraint
+            $table->foreign('company_id')
+                  ->references('id')
+                  ->on('company')
+                  ->onDelete('cascade');
         });
     }
 
