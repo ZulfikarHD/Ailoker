@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 Route::view('/', 'dashboard');
+Route::view('/loker-terbaru', 'list-loker')->name('listLoker');
 
 Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])
