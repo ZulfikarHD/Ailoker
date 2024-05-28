@@ -18,7 +18,7 @@ return new class extends Migration
             $table->unsignedBigInteger('industry_id');
             $table->text('company_size')->nullable();
             $table->string('website')->nullable();
-            $table->text('about_us')->nullable();
+            $table->text('about_us');
             $table->string('logo')->nullable();
             $table->timestamps();
 

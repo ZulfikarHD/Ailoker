@@ -19,7 +19,7 @@ return new class extends Migration
             $table->unsignedBigInteger('company_id');
             $table->unsignedBigInteger('contract_id');
             $table->unsignedBigInteger('posted_by');
-            $table->boolean('is_verified');
+            $table->boolean('is_verified')->default(FALSE);
             $table->datetime('expired_date');
             $table->timestamps();
 
