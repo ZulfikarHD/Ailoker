@@ -13,9 +13,11 @@ return new class extends Migration
     {
         Schema::create('company_contact', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('email')->unique();
-            $table->string('phone_number')->nullable();
+            $table->foreignId('company_id')
+                ->constrained()
+                ->onDelete('cascade');
+            $table->string('phone_number');
+            $table->boolean('status')->default(TRUE);
             $table->timestamps();
         });
     }

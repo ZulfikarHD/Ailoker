@@ -13,6 +13,12 @@ return new class extends Migration
     {
         Schema::create('company_email', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('company_id')
+                ->constrained()
+                ->onDelete('cascade');
+            $table->string('email')->unique();
+            $table->boolean('status')
+                ->default(true);
             $table->timestamps();
         });
     }
