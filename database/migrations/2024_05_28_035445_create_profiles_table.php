@@ -16,7 +16,7 @@ return new class extends Migration
             $table->unsignedBigInteger('user_id');
             $table->string('name');
             $table->text('address');
-            $table->string('pendidikan');
+            $table->string('degree');
             $table->date('birth_date');
             $table->timestamps();
 
