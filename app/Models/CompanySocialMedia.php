@@ -10,4 +10,14 @@ class CompanySocialMedia extends Model
     use HasFactory;
     protected $table =  "company_social_media";
 
+    /**
+     * Get the company that owns the CompanySocialMedia
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function company(): BelongsTo
+    {
+        return $this->belongsTo(Company::class);
+    }
+
 }
