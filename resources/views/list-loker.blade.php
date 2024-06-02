@@ -57,7 +57,7 @@
     </div>
 
     {{-- List Loker --}}
-    <section class=" px-4 md:px-10 mb-16">
+    <section class="max-w-7xl mx-auto px-4 md:px-10 mb-16">
         {{-- Header --}}
         <h3 class="text-3xl font-semibold text-slate-800 dark:text-white mb-8">Lowongan Terkait</h3>
 
