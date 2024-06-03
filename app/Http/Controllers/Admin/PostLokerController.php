@@ -3,8 +3,9 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
+use App\Http\Requests\StorePostingLokerRequest;
 use App\Models\Contract;
+use App\Models\Company;
 
 class PostLokerController extends Controller
 {
@@ -12,13 +13,24 @@ class PostLokerController extends Controller
     {
         $contracts = Contract::all();
 
-        return view('admin.form.posting-loker',[
+        return view('admin.form.posting-loker', [
             'contracts' => $contracts,
         ]);
     }
 
-    public function store(Request $request)
+    public function store(StorePostingLokerRequest $request)
     {
-        dd($request->all());
+        Company::updateOrCreate(
+            [
+                'name' => $request->namaPT,
+                'address'       => $request->alamatPT,
+                'website'       => $request->webPT,
+                'industry_id'   => $request->industriPT,
+            ],
+            [
+                'about_us'   => $request->profilePT,
+                'logo'       => $request->logoPT,
+            ]
+        );
     }
 }

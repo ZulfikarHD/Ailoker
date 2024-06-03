@@ -12,7 +12,7 @@
                     {{-- Nama Perusahaan --}}
                     <div class="flex flex-wrap items-center gap-3">
                         <label for="namaPT" class="ml-1 w-[15ch] font-medium text-slate-600">{{ __('Nama Perusahaan') }}</label>
-                        <input id="namaPT" name="namaPt" type="text" class="flex-1 rounded-md border border-slate-200 px-4 py-2"
+                        <input id="namaPT" name="namaPT" type="text" class="flex-1 rounded-md border border-slate-200 px-4 py-2"
                             placeholder="Eg. Perusahaan Sejahtera">
                     </div>
 
@@ -74,9 +74,9 @@
                     <div class="flex flex-wrap items-center gap-3">
                         <label for="jenisKelamin" class="ml-1 w-[15ch] font-medium text-slate-600">{{ __('Jenis Kelamin') }}</label>
                         <select id="jenisKelamin" name="jenisKelamin" type="text" class="flex-1 rounded-md border border-slate-200 px-4 py-2">
-                            <option value="">{{ __('Laki - Laki') }}</option>
-                            <option value="">{{ __('Perempuan') }}</option>
-                            <option value="">{{ __('Laki - Laki / Perempuan') }}</option>
+                            <option value="1">{{ __('Laki - Laki') }}</option>
+                            <option value="2">{{ __('Perempuan') }}</option>
+                            <option value="3" selected>{{ __('Laki - Laki / Perempuan') }}</option>
                         </select>
                     </div>
 

@@ -14,8 +14,6 @@ return new class extends Migration
         Schema::create('jobs', function (Blueprint $table) {
             $table->id();
             $table->string('title', 255);
-            $table->text('address');
-            $table->string('how_to_apply', 255);
             $table->unsignedBigInteger('company_id');
             $table->unsignedBigInteger('contract_id');
             $table->unsignedBigInteger('posted_by');

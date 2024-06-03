@@ -11,12 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('job_description', function (Blueprint $table) {
+        Schema::create('job_education', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('jobs_id');
-            $table->string('section');
-            $table->text('description')->nullable();
-            $table->integer('order');
+            $table->string('education', 25);
             $table->timestamps();
 
             $table->foreign('jobs_id')
@@ -24,6 +22,7 @@ return new class extends Migration
                  ->on('jobs')
                  ->onUpdate('cascade')
                  ->onDelete('cascade');
+
         });
     }
 
@@ -32,6 +31,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('job_description');
+        Schema::dropIfExists('job_education');
     }
 };
