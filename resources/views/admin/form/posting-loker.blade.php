@@ -73,7 +73,7 @@
                     {{-- Jenis Kelamin --}}
                     <div class="flex flex-wrap items-center gap-3">
                         <label for="jenisKelamin" class="ml-1 w-[15ch] font-medium text-slate-600">{{ __('Jenis Kelamin') }}</label>
-                        <select id="skills" name="Skills" type="text" class="flex-1 rounded-md border border-slate-200 px-4 py-2">
+                        <select id="jenisKelamin" name="jenisKelamin" type="text" class="flex-1 rounded-md border border-slate-200 px-4 py-2">
                             <option value="">{{ __('Laki - Laki') }}</option>
                             <option value="">{{ __('Perempuan') }}</option>
                             <option value="">{{ __('Laki - Laki / Perempuan') }}</option>
@@ -83,7 +83,7 @@
                     {{-- Pendidikan --}}
                     <div class="flex flex-wrap items-center gap-3">
                         <label for="pendidikan" class="ml-1 w-[15ch] font-medium text-slate-600">{{ __('Pendidikan') }}</label>
-                        <select id="skills" name="Skills" type="text" class="flex-1 rounded-md border border-slate-200 px-4 py-2">
+                        <select id="pendidikan" name="pendidikan" type="text" class="flex-1 rounded-md border border-slate-200 px-4 py-2">
                             <option value="">{{ __('-') }}</option>
                             <option value="1">{{ __('SD') }}</option>
                             <option value="2">{{ __('SMP Sederajat') }}</option>
@@ -112,7 +112,7 @@
                     {{-- Skills --}}
                     <div class="flex flex-wrap items-center gap-3">
                         <label for="skills" class="ml-1 w-[15ch] font-medium text-slate-600">{{ __('Skills') }}</label>
-                        <input id="skills" name="Skills" type="text" class="flex-1 rounded-md border border-slate-200 px-4 py-2"
+                        <input id="skills" name="skills" type="text" class="flex-1 rounded-md border border-slate-200 px-4 py-2"
                             placeholder="Eg. Autocad,PHP,Golang">
                     </div>
 
