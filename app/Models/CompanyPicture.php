@@ -10,6 +10,7 @@ class CompanyPicture extends Model
 {
     use HasFactory;
     protected $table =  "company_picture";
+    protected $guarded = ['id', 'created_at', 'updated_at'];
 
     /**
      * Get the company that owns the CompanyPicture

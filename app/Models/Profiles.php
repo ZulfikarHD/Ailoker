@@ -10,6 +10,7 @@ class Profiles extends Model
 {
     use HasFactory;
     protected $table =  "profile";
+    protected $guarded = ['id', 'created_at', 'updated_at'];
 
     /**
      * Get the user associated with the Profiles

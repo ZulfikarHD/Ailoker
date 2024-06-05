@@ -9,7 +9,8 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 class Company extends Model
 {
     use HasFactory;
-    protected $table =  "company";
+    protected $table = "company";
+    protected $guarded = ['id', 'created_at', 'updated_at'];
 
     /**
      * Get all of the companyContact for the Company

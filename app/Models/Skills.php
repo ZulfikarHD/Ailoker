@@ -9,4 +9,5 @@ class Skills extends Model
 {
     use HasFactory;
     protected $table =  "skills";
+    protected $guarded = ['id', 'created_at', 'updated_at'];
 }

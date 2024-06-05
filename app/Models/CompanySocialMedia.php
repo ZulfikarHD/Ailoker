@@ -9,6 +9,7 @@ class CompanySocialMedia extends Model
 {
     use HasFactory;
     protected $table =  "company_social_media";
+    protected $guarded = ['id', 'created_at', 'updated_at'];
 
     /**
      * Get the company that owns the CompanySocialMedia

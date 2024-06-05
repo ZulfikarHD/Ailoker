@@ -10,6 +10,7 @@ class CompanyContact extends Model
 {
     use HasFactory;
     protected $table =  "company_contact";
+    protected $guarded = ['id', 'created_at', 'updated_at'];
 
     /**
      * Get the company that owns the CompanyContact

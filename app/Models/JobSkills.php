@@ -10,6 +10,8 @@ class JobSkills extends Model
 {
     use HasFactory;
     protected $table =  "job_skills";
+    protected $guarded = ['id'];
+    public $timestamps = false;
 
     /**
      * Get the jobs that owns the JobSkills

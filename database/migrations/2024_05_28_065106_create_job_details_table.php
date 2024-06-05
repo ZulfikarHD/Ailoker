@@ -16,7 +16,6 @@ return new class extends Migration
             $table->unsignedBigInteger('jobs_id');
             $table->text('address');
             $table->text('description')->nullable();
-            $table->integer('order');
             $table->timestamps();
 
             $table->foreign('jobs_id')

@@ -6,10 +6,12 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-class JobDescription extends Model
+class JobDetails extends Model
 {
     use HasFactory;
-    protected $table =  "job_description";
+    protected $table =  "job_details";
+
+    protected $guarded = ['id', 'created_at', 'updated_at'];
 
     /**
      * Get the jobs that owns the JobDescription

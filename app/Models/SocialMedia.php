@@ -9,4 +9,5 @@ class SocialMedia extends Model
 {
     use HasFactory;
     protected $table =  "social_media";
+    protected $guarded = ['id', 'created_at', 'updated_at'];
 }

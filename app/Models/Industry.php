@@ -9,4 +9,5 @@ class Industry extends Model
 {
     use HasFactory;
     protected $table =  "industry";
+    protected $guarded = ['id', 'created_at', 'updated_at'];
 }

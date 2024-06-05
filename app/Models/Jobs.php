@@ -10,6 +10,7 @@ class Jobs extends Model
 {
     use HasFactory;
     protected $table =  "jobs";
+    protected $guarded = ['id', 'created_at', 'updated_at'];
 
     /**
      * Get all of the jobDescription for the Jobs
