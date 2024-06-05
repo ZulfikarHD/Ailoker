@@ -11,10 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('job_description', function (Blueprint $table) {
+        Schema::create('job_details', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('jobs_id');
-            $table->string('section');
+            $table->text('address');
             $table->text('description')->nullable();
             $table->integer('order');
             $table->timestamps();
@@ -32,6 +32,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('job_description');
+        Schema::dropIfExists('job_details');
     }
 };
